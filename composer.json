@@ -11,6 +11,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "hashids/hashids": "^2.0",
         "kemalevren/geth-php": "^1.1",
+        "laracasts/presenter": "^0.2.1",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "vinkla/hashids": "3.1"

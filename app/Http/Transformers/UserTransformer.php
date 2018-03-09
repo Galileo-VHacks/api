@@ -37,6 +37,8 @@ class UserTransformer extends TransformerAbstract
     {
         return [
             'email' => $user->email,
+            'wallet' => $user->wallet,
+            'balance' => $user->present()->balance,
             'created_at' => $user->created_at,
         ];
     }
