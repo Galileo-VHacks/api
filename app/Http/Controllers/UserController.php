@@ -25,8 +25,9 @@ class UserController extends Controller
             $user = $this->dispatchNow(new RegisterUser(
                 $request->input('name'),
                 $request->input('surname'),
-                $request->input( 'email'),
-                $request->input('password')));
+                $request->input('email'),
+                $request->input('password')
+            ));
         } catch (UserAlreadyRegisteredException $e) {
             return $this->response()->errorForbidden();
         }
@@ -37,7 +38,7 @@ class UserController extends Controller
     public function login(LoginRequest $request)
     {
         $user = Sentinel::authenticate(array(
-            'email'    => $request->input('email'),
+            'email' => $request->input('email'),
             'password' => $request->input('password')
         ));
 
@@ -46,7 +47,7 @@ class UserController extends Controller
 
     public function logout()
     {
-        if(!$user = Sentinel::check()){
+        if (!$user = Sentinel::check()) {
             return $this->response()->errorUnauthorized();
         }
 

@@ -7,9 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Cartalyst\Sentinel\Roles\EloquentRole;
+use Api\Presenters\UserPresenter;
+use Laracasts\Presenter\PresentableTrait;
 
 class User extends EloquentUser
 {
+    use PresentableTrait;
+
     /**
      * {@inheritdoc}
      */
@@ -24,7 +28,15 @@ class User extends EloquentUser
         'last_name',
         'first_name',
         'permissions',
+        'wallet',
     ];
+
+    /**
+     * The presenter
+     *
+     * @var UserPresenter
+     */
+    protected $presenter = UserPresenter::class;
 
     /**
      * {@inheritdoc}
