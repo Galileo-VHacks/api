@@ -24,6 +24,7 @@ class User extends EloquentUser
         'last_name',
         'first_name',
         'permissions',
+        'wallet',
     ];
 
     /**
