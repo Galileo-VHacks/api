@@ -42,6 +42,19 @@ class UserController extends Controller
             'password' => $request->input('password')
         ));
 
+        if (!$user) {
+            return $this->response()->errorUnauthorized();
+        }
+
+        return $this->item($user, new UserTransformer);
+    }
+
+    public function currentUser()
+    {
+        if (!$user = Sentinel::check()) {
+            return $this->response()->errorUnauthorized();
+        }
+
         return $this->item($user, new UserTransformer);
     }
 

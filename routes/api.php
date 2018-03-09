@@ -24,6 +24,11 @@ $api->version('v1', function ($api) {
         'namespace' => 'Api\Http\Controllers',
     ], function ($api) {
 
+        $api->get('/', [
+            'as' => 'api.user.currentUser',
+            'uses' => 'UserController@currentUser'
+        ]);
+
         $api->post('register', [
             'as' => 'api.user.register',
             'uses' => 'UserController@register'
