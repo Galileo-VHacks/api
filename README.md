@@ -35,3 +35,5 @@ This will start the PHP server on port 8080 on your machine.
 
 In order to perform most of the actions, you will also need a blockchain testing platform on your machine. You can read how to set this up in our [InteCoin repository](https://github.com/Galileo-VHacks/InteCoin).
 
+If you want to have an idea of how the API works and which endpoints are available you can check the first [documentation draft](https://galileovhacks.docs.apiary.io/).
+
