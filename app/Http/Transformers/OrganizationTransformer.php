@@ -42,6 +42,7 @@ class OrganizationTransformer extends TransformerAbstract
             'phone' => $organization->phone_number,
             'website' => $organization->website,
             'type' => $organization->type,
+            'price' => $organization->price,
             'location' => $this->getLocation($organization),
             'created_at' => $organization->created_at
         ];
