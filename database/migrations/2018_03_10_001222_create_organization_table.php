@@ -22,8 +22,8 @@ class CreateOrganizationTable extends Migration
             $t->string('phone_number');
             $t->string('website');
             $t->string('type');
-            $t->float('lat');
-            $t->float('long');
+            $t->double('lat');
+            $t->double('long');
 
             $t->timestamps();
         });
