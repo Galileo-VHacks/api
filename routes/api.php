@@ -56,4 +56,14 @@ $api->version('v1', function ($api) {
         ]);
     });
 
+    $api->group([
+        'prefix' => 'organization',
+        'namespace' => 'Api\Http\Controllers',
+    ], function ($api) {
+        $api->get('/shelter', [
+            'as' => 'api.organization.shelters',
+            'uses' => 'OrganizationController@shelters'
+        ]);
+    });
+
 });
