@@ -64,6 +64,11 @@ $api->version('v1', function ($api) {
             'as' => 'api.organization.shelters',
             'uses' => 'OrganizationController@shelters'
         ]);
+
+        $api->get('/pantry', [
+            'as' => 'api.organization.food',
+            'uses' => 'OrganizationController@food'
+        ]);
     });
 
 });

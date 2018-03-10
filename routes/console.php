@@ -45,4 +45,22 @@ Artisan::command('generate:organization', function () {
         'created_at' => '2018-03-10 01:33:49',
         'updated_at' => '2018-03-10 01:33:49'
     ]);
+
+    $wallet = $jsonRpc->personal_newAccount('password1');
+
+    DB::table('organizations')->insert([
+        'id' => '2',
+        'reference_code' => '735DK3D5',
+        'wallet' => $wallet,
+        'name' => 'Galileo Pantries',
+        'email' => 'info@galileogalilei.io',
+        'phone_number' => '+39 0101010101',
+        'website' => 'https://github.com/orgs/Galileo-VHacks/',
+        'type' => 'pantry',
+        'lat' => '43.9021193',
+        'long' => '11.4587924',
+        'created_at' => '2018-03-10 01:33:49',
+        'updated_at' => '2018-03-10 01:33:49'
+    ]);
+
 })->describe('Setup a new organization');

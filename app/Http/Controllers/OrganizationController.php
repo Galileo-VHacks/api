@@ -29,6 +29,17 @@ class OrganizationController extends Controller
         return $this->response()->collection($organizations, new OrganizationTransformer());
     }
 
+    public function food()
+    {
+        if (!$user = Sentinel::check()) {
+            return $this->response()->errorUnauthorized();
+        }
+
+        $organizations = \Api\Organization::where('type', '=', 'pantry')->get();
+
+        return $this->response()->collection($organizations, new OrganizationTransformer());
+    }
+
     public function list()
     {
         JsonRpc::setOptions([
