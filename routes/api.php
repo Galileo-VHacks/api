@@ -71,4 +71,19 @@ $api->version('v1', function ($api) {
         ]);
     });
 
+    $api->group([
+        'prefix' => 'transaction',
+        'namespace' => 'Api\Http\Controllers',
+    ], function ($api) {
+        $api->post('/', [
+            'as' => 'api.transaction.execute',
+            'uses' => 'TransactionController@execute'
+        ]);
+
+        $api->get('/', [
+            'as' => 'api.transaction.list',
+            'uses' => 'TransactionController@list'
+        ]);
+    });
+
 });

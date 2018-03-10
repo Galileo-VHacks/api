@@ -71,6 +71,8 @@ class RegisterUser implements ShouldQueue
 
         $user->profile()->create($profileAttributes);
 
+        $user->wallet()->create(['balance' => '10']);
+
         return $user;
     }
 }

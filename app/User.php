@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Cartalyst\Sentinel\Roles\EloquentRole;
 use Api\Presenters\UserPresenter;
 use Laracasts\Presenter\PresentableTrait;
+use Api\Wallet;
 
 class User extends EloquentUser
 {
@@ -52,6 +53,11 @@ class User extends EloquentUser
     public function activity()
     {
         return $this->hasMany(Activity::class);
+    }
+
+    public function wallet()
+    {
+        return $this->hasOne(Wallet::class);
     }
 
 }
