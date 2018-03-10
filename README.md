@@ -1,6 +1,6 @@
 # VHacks_Backend
 
-## Setups
+## Setup
 
 Make sure you have PHP 7.1 or higher installed on your system as well as [composer](https://getcomposer.org). You will also need a MySQL database running (either locally or using an online service) and you will need to create a database named `vhacks`.
 
