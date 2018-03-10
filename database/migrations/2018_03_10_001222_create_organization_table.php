@@ -17,6 +17,7 @@ class CreateOrganizationTable extends Migration
             $t->increments('id');
             $t->string('reference_code')->nullable();
             $t->string('name');
+            $t->string('wallet');
             $t->string('email');
             $t->string('phone_number');
             $t->string('website');
